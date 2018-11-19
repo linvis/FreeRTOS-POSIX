@@ -8,6 +8,13 @@ set(PORTABLE_FILES
     Source/portable/MemMang/heap_3.c 
     Source/portable/GCC/POSIX/port.c
     Demo/main.c)
+set(SOURCE_FILES
+    Source/croutine.c
+    Source/event_groups.c
+    Source/list.c
+    Source/queue.c
+    Source/tasks.c
+    Source/timers.c)
 
 include_directories(Source/include Source/portable/GCC/POSIX Demo)
 
@@ -16,10 +23,8 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wparentheses -Wshadow -Wno-sign-compare -Ws
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wunknown-pragmas -Wunused-function -Wunused-label -Wmissing-prototypes -Wno-unused-parameter")
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32 -DDEBUG=1 -g -UUSE_STDIO -D__GCC_POSIX__=1 -DMAX_NUMBER_OF_TASKS=300 -O2")
-if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-    message(macos)
-    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pthread")
-endif()
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pthread")
 
 MESSAGE( STATUS "CMAKE_C_FLAGS: " ${CMAKE_C_FLAGS} )
 

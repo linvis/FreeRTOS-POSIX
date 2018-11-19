@@ -137,7 +137,7 @@ static void prvCheckTask( void *pvParameters )
         /* for (long i = 0; i < 0xFFFFFFFF; i++) */
             /* for (long j = 0; j < 0xFFFFFFFF; j++) */
                 /* for (long m = 0; m < 0xFFFFFFFF; m++); */
-        vTaskSuspendAll();
+        /* vTaskSuspendAll(); */
         /* printf("suspend all\n"); */
         /* vTaskResume(xHandle); */
         /* printf("resume self\n"); */
