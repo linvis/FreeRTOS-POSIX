@@ -22,7 +22,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -W -Wall -Werror -Wextra -Wformat -Wmissing-
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wparentheses -Wshadow -Wno-sign-compare -Wswitch -Wuninitialized")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wunknown-pragmas -Wunused-function -Wunused-label -Wmissing-prototypes -Wno-unused-parameter")
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32 -DDEBUG=1 -g -UUSE_STDIO -D__GCC_POSIX__=1 -DMAX_NUMBER_OF_TASKS=300 -O2")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DDEBUG=1 -g -UUSE_STDIO -D__GCC_POSIX__=1 -DMAX_NUMBER_OF_TASKS=300 -O2")
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pthread")
 
