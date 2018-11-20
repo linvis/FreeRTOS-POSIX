@@ -123,32 +123,12 @@ static void prvCheckTask( void *pvParameters );
 
 /*-----------------------------------------------------------*/
 TaskHandle_t xHandle;
-TaskHandle_t xHandle2;
 
 static void prvCheckTask( void *pvParameters )
 {
     while(1)
     {
-        
-
         printf("Hello world\n");
-        fflush(stdout);
-        vTaskDelay(pdMS_TO_TICKS(100));
-        /* for (long i = 0; i < 0xFFFFFFFF; i++) */
-            /* for (long j = 0; j < 0xFFFFFFFF; j++) */
-                /* for (long m = 0; m < 0xFFFFFFFF; m++); */
-        /* vTaskSuspendAll(); */
-        /* printf("suspend all\n"); */
-        /* vTaskResume(xHandle); */
-        /* printf("resume self\n"); */
-    }
-}
-
-static void prvCheckTask2( void *pvParameters )
-{
-    while(1)
-    {
-        printf("Hello world222\n");
         fflush(stdout);
         vTaskDelay(pdMS_TO_TICKS(100));
     }
@@ -157,7 +137,6 @@ static void prvCheckTask2( void *pvParameters )
 int main ( void )
 {
 	xTaskCreate( prvCheckTask, "Task 1", configMINIMAL_STACK_SIZE, NULL, mainCHECK_TASK_PRIORITY, &xHandle );
-	xTaskCreate( prvCheckTask2, "Task 2", configMINIMAL_STACK_SIZE, NULL, mainCHECK_TASK_PRIORITY, &xHandle2 );
 	vTaskStartScheduler();
 
 	/* Should never get here unless there was not enough heap space to create
