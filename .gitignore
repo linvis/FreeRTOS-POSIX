@@ -1,2 +1,4 @@
 build
 FreeRTOS-POSIX
+cscope*
+tags*
